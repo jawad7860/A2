@@ -2,12 +2,9 @@
 This module implements a Flask application for predicting stock prices.
 """
 
-try:
-    from flask import Flask, render_template, request
-    import joblib
-except ImportError as e:
-    print(e)
-    exit(1)
+import sys
+from flask import Flask, render_template, request
+import joblib
 
 app = Flask(__name__)
 
@@ -41,4 +38,5 @@ def predict():
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
+    sys.exit()
 
