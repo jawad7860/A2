@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import joblib
 from sklearn.linear_model import LinearRegression
 app = Flask(__name__)
