@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 import joblib
-from sklearn.linear_model import LinearRegression
+
 app = Flask(__name__)
 
 
@@ -12,8 +12,8 @@ def home():
 
 # Prediction route
 @app.route('/predict', methods=['POST'])
-def predict():
 
+def predict():
     
     loaded_model = joblib.load('model1.pkl')
 
